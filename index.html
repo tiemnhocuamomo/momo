@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff6f8">
+  <meta name="description" content="Tiệm nhỏ của Mỡ Mỡ — móc khóa handmade, charm chữ và quà tặng làm theo yêu cầu.">
+  <title>Tiệm nhỏ của Mỡ Mỡ | Handmade bằng cả trái tim</title>
+  <style>
+    :root{--pink:#ffdae5;--pink2:#fff1f5;--rose:#cf587e;--ink:#3e3037;--cream:#fffaf6;--lilac:#eee5ff;--mint:#dff5e9;--line:#f0dce3}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family: "Trebuchet MS",system-ui,-apple-system,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} button,input,textarea{font:inherit}
+    .topbar{background:var(--pink2);text-align:center;padding:8px 14px;font-size:.9rem;color:#8e4c65}
+    header{position:sticky;top:0;z-index:10;background:#fffaf6ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.05rem}.logo{width:44px;height:44px;border-radius:15px;background:var(--pink);display:grid;place-items:center;font-size:25px;box-shadow:inset 0 -4px #f5b9cb}
+    nav{display:flex;gap:22px;align-items:center;font-size:.93rem;font-weight:700} nav a:hover{color:var(--rose)}
+    .btn{border:0;border-radius:999px;padding:12px 19px;background:var(--rose);color:white;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;box-shadow:0 5px 0 #b8466c;transition:transform .15s}
+    .btn:hover{transform:translateY(-2px)}.btn.light{background:white;color:var(--rose);box-shadow:0 4px 0 #f2d3de;border:1px solid var(--line)}
+    .hero{max-width:1120px;margin:auto;padding:58px 22px 44px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:38px}
+    .eyebrow{display:inline-block;background:var(--mint);padding:7px 13px;border-radius:999px;font-weight:800;font-size:.82rem;color:#39765b}
+    h1{font-size:clamp(2.5rem,5.3vw,4.7rem);line-height:1.05;letter-spacing:-.05em;margin:18px 0}
+    h1 span{color:var(--rose);position:relative} .hero p{font-size:1.08rem;color:#78646d;max-width:520px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .hero-art{position:relative;min-height:390px;border-radius:40px;background:linear-gradient(140deg,#ffe4ec,#f0e8ff 60%,#e3f7ed);display:grid;place-items:center;overflow:hidden}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:#ffffff80}.hero-art:before{width:210px;height:210px;top:-55px;right:-25px}.hero-art:after{width:140px;height:140px;bottom:-35px;left:-20px}
+    .craft-card{position:relative;z-index:1;background:#fffdfb;padding:17px;border-radius:28px;box-shadow:0 18px 45px #8d587322;transform:rotate(-4deg);width:min(72%,300px);text-align:center}
+    .craft-photo{height:235px;border-radius:20px;background:repeating-linear-gradient(45deg,#fff0f5 0 12px,#fce4ed 12px 24px);display:grid;place-items:center;font-size:6rem}
+    .craft-card strong{display:block;margin-top:10px;font-size:1.1rem}.craft-card small{color:#9b7785}
+    .float{position:absolute;z-index:2;font-size:2.2rem;filter:drop-shadow(0 5px 3px #ad789022)}.f1{top:12%;left:12%;transform:rotate(-15deg)}.f2{right:12%;bottom:13%;transform:rotate(12deg)}.f3{top:18%;right:13%;font-size:1.8rem}
+    section{scroll-margin-top:90px}.section{max-width:1120px;margin:auto;padding:45px 22px 65px}.section-head{text-align:center;margin:0 auto 28px;max-width:650px}.kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);font-weight:900}.section h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin:8px 0 12px;letter-spacing:-.03em}.muted{color:#816c75}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.benefit{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;text-align:center}.benefit .emoji{font-size:2rem}.benefit h3{margin:8px 0 5px;font-size:1.05rem}.benefit p{margin:0;color:#816c75;font-size:.93rem}
+    .filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:22px 0 28px}.filter{border:1px solid var(--line);border-radius:999px;padding:9px 15px;background:white;color:#725b65;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:var(--rose);border-color:var(--rose);color:white}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{background:white;border:1px solid var(--line);border-radius:25px;overflow:hidden;box-shadow:0 8px 25px #744b5c0a;transition:transform .2s}.product:hover{transform:translateY(-4px)}
+    .product-art{aspect-ratio:1.12;background:var(--bg,#ffe9f0);display:grid;place-items:center;position:relative;overflow:hidden}.product-art:before{content:"";position:absolute;width:70%;height:70%;border:1px dashed #ffffffb8;border-radius:50%}.product-art span{font-size:5.1rem;position:relative;filter:drop-shadow(0 7px 4px #6840501a)}.tag{position:absolute;top:13px;left:13px;background:white;border-radius:999px;padding:5px 10px;font-size:.75rem;font-weight:900;color:var(--rose)}
+    .product-info{padding:17px}.product-info h3{margin:0 0 5px;font-size:1.08rem}.product-info p{margin:0 0 14px;color:#826e76;font-size:.9rem;min-height:45px}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:900;color:var(--rose)}.order-mini{border:1px solid #f0c9d7;background:var(--pink2);color:#a53e64;border-radius:999px;padding:8px 12px;font-size:.83rem;font-weight:900;cursor:pointer}
+    .custom{background:linear-gradient(120deg,#fff0f5,#f2edff);border-radius:32px;padding:32px;display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center}.custom h2{margin-top:8px}.custom-list{padding-left:20px;color:#725d66}.custom-list li{margin:6px 0}.order-form{background:white;border-radius:24px;padding:22px;border:1px solid #f4dce5}.field{margin-bottom:13px}.field label{display:block;font-weight:800;font-size:.88rem;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;border:1px solid #ead6de;border-radius:12px;padding:11px 12px;background:#fffdfd;color:var(--ink);outline-color:#d87596}.field textarea{min-height:85px;resize:vertical}.form-note{font-size:.8rem;color:#8a7580;margin:10px 0 0}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.contact-card{background:white;border:1px solid var(--line);border-radius:20px;padding:19px;text-align:center}.contact-card .emoji{font-size:1.8rem}.contact-card strong{display:block;margin:6px 0}.contact-card p{margin:0;font-size:.9rem;color:#816c75;overflow-wrap:anywhere}
+    footer{border-top:1px solid var(--line);text-align:center;padding:27px 20px;color:#8a737e;font-size:.9rem}footer strong{color:var(--rose)}
+    .toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,150%);background:#3e3037;color:white;padding:12px 18px;border-radius:999px;z-index:30;transition:transform .25s;max-width:90%;text-align:center}.toast.show{transform:translate(-50%,0)}
+    @media(max-width:760px){.nav{padding:10px 16px}nav{gap:12px;font-size:.83rem}nav a:not(.nav-order){display:none}.hero{grid-template-columns:1fr;padding-top:36px;gap:25px}.hero-art{min-height:320px}.craft-photo{height:190px}.benefits{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-info{padding:13px}.product-info p{min-height:unset}.product-bottom{align-items:flex-start;flex-direction:column}.custom{grid-template-columns:1fr;padding:22px}.contact-grid{grid-template-columns:1fr}.section{padding:36px 16px 48px}}
+    @media(max-width:430px){.brand{font-size:.92rem}.logo{width:38px;height:38px}.products{grid-template-columns:1fr 1fr}.product-art span{font-size:4rem}.product-info h3{font-size:.98rem}.order-mini{padding:7px 10px}.hero-art{min-height:280px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">🎀 Mỗi món đồ nhỏ xinh đều được làm bằng sự chăm chút và yêu thương 🎀</div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home"><span class="logo">🧸</span><span>Tiệm nhỏ của Mỡ Mỡ</span></a>
+      <nav>
+        <a href="#home">Trang chủ</a><a href="#products">Sản phẩm</a><a href="#custom">Đặt làm riêng</a><a href="#contact">Liên hệ</a>
+        <a class="btn nav-order" href="#custom">Đặt hàng ♡</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <span class="eyebrow">✿ Handmade with love ✿</span>
+        <h1>Món quà nhỏ,<br><span>niềm vui to</span> ♡</h1>
+        <p>Chào bạn đến với góc nhỏ của Mỡ Mỡ! Những chiếc móc khóa, charm chữ và món quà handmade được làm theo yêu cầu — xinh xắn, đáng yêu và mang dấu ấn riêng của bạn.</p>
+        <div class="hero-actions"><a class="btn" href="#products">Khám phá sản phẩm ✨</a><a class="btn light" href="#custom">Tạo món quà của bạn</a></div>
+      </div>
+      <div class="hero-art" aria-label="Minh họa sản phẩm handmade dễ thương">
+        <span class="float f1">✿</span><span class="float f2">♡</span><span class="float f3">✨</span>
+        <div class="craft-card"><div class="craft-photo">🧸🎀</div><strong>Made just for you</strong><small>Một chút dễ thương từ Mỡ Mỡ</small></div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Điểm đặc biệt">
+      <div class="benefits">
+        <article class="benefit"><div class="emoji">🧵</div><h3>Làm thủ công tỉ mỉ</h3><p>Mỗi sản phẩm đều được chăm chút bằng đôi tay và sự yêu thích.</p></article>
+        <article class="benefit"><div class="emoji">💌</div><h3>Cá nhân hóa theo ý bạn</h3><p>Thêm tên, chữ cái, màu sắc hoặc ý tưởng riêng của bạn.</p></article>
+        <article class="benefit"><div class="emoji">🎁</div><h3>Quà tặng đầy ý nghĩa</h3><p>Dành tặng bạn bè, người thương, nhóm bạn hay cả lớp.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-head"><div class="kicker">Little things, big love</div><h2>Góc sản phẩm xinh xắn</h2><p class="muted">Chọn món bạn thích để gửi yêu cầu cho Mỡ Mỡ nhé. Hình minh họa và giá có thể thay bằng sản phẩm thực tế của shop.</p></div>
+      <div class="filters" role="group" aria-label="Lọc sản phẩm">
+        <button class="filter active" data-filter="all">Tất cả</button><button class="filter" data-filter="keychain">Móc khóa</button><button class="filter" data-filter="charm">Charm chữ</button><button class="filter" data-filter="gift">Quà tặng</button>
+      </div>
+      <div class="products" id="productGrid">
+        <article class="product" data-category="keychain"><div class="product-art" style="--bg:#ffe5ed"><span>🧸</span><b class="tag">Bán chạy ♡</b></div><div class="product-info"><h3>Móc khóa thú bông</h3><p>Bạn đồng hành nhỏ xinh treo túi hoặc chìa khóa.</p><div class="product-bottom"><span class="price">Liên hệ báo giá</span><button class="order-mini" data-product="Móc khóa thú bông">Đặt món này</button></div></div></article>
+        <article class="product" data-category="keychain"><div class="product-art" style="--bg:#e5f5ed"><span>🐸</span><b class="tag">Dễ thương</b></div><div class="product-info"><h3>Móc khóa theo mẫu</h3><p>Chọn mẫu, phối màu và tạo phiên bản của riêng bạn.</p><div class="product-bottom"><span class="price">Liên hệ báo giá</span><button class="order-mini" data-product="Móc khóa theo mẫu">Đặt món này</button></div></div></article>
+        <article class="product" data-category="charm"><div class="product-art" style="--bg:#eee6ff"><span>🔠</span></div><div class="product-info"><h3>Charm chữ cái</h3><p>Chữ cái đầu tên hoặc ghép thành tên riêng của bạn.</p><div class="product-bottom"><span class="price">Liên hệ báo giá</span><button class="order-mini" data-product="Charm chữ cái">Đặt món này</button></div></div></article>
+        <article class="product" data-category="keychain"><div class="product-art" style="--bg:#fff0d8"><span>🌼</span></div><div class="product-info"><h3>Móc khóa hoa xinh</h3><p>Một chút rực rỡ và ngọt ngào cho chiếc túi mỗi ngày.</p><div class="product-bottom"><span class="price">Liên hệ báo giá</span><button class="order-mini" data-product="Móc khóa hoa xinh">Đặt món này</button></div></div></article>
+        <article class="product" data-category="gift"><div class="product-art" style="--bg:#ffe8df"><span>🎁</span><b class="tag">Tặng người thương</b></div><div class="product-info"><h3>Quà tặng bạn bè</h3><p>Món quà nhỏ dành cho sinh nhật, kỷ niệm và dịp đặc biệt.</p><div class="product-bottom"><span class="price">Liên hệ báo giá</span><button class="order-mini" data-product="Quà tặng bạn bè">Đặt món này</button></div></div></article>
+        <article class="product" data-category="gift"><div class="product-art" style="--bg:#e8edff"><span>👭</span></div><div class="product-info"><h3>Móc khóa nhóm / lớp</h3><p>Đặt theo bộ cho hội bạn thân, nhóm hoặc tập thể lớp.</p><div class="product-bottom"><span class="price">Liên hệ báo giá</span><button class="order-mini" data-product="Móc khóa nhóm / lớp">Đặt món này</button></div></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="custom">
+      <div class="custom">
+        <div><div class="kicker">Your idea, made real</div><h2>Mỡ Mỡ giúp bạn biến ý tưởng thành món quà thật xinh ♡</h2><p class="muted">Bạn có thể đặt làm theo yêu cầu:</p><ul class="custom-list"><li>Tên riêng và chữ cái</li><li>Móc khóa nhóm, móc khóa lớp</li><li>Charm chữ, phối màu theo sở thích</li><li>Quà tặng bạn bè và quà lưu niệm</li></ul><p class="muted">Điền thông tin bên cạnh để tạo tin nhắn đặt hàng mẫu. Website không tự gửi đơn nếu bạn chưa chọn kênh liên hệ.</p></div>
+        <form class="order-form" id="orderForm">
+          <h3 style="margin:0 0 15px">💌 Gửi yêu cầu đặt hàng</h3>
+          <div class="field"><label for="customer">Tên của bạn</label><input id="customer" placeholder="Ví dụ: Minh Anh" required></div>
+          <div class="field"><label for="product">Bạn thích sản phẩm nào?</label><select id="product"><option>Móc khóa thú bông</option><option>Móc khóa theo mẫu</option><option>Charm chữ cái</option><option>Móc khóa hoa xinh</option><option>Quà tặng bạn bè</option><option>Móc khóa nhóm / lớp</option><option>Sản phẩm khác / đặt riêng</option></select></div>
+          <div class="field"><label for="quantity">Số lượng dự kiến</label><input id="quantity" type="number" min="1" value="1" required></div>
+          <div class="field"><label for="details">Ý tưởng / màu sắc / tên cần làm</label><textarea id="details" placeholder="Mô tả món đồ bạn muốn..."></textarea></div>
+          <button class="btn" type="submit" style="width:100%">Tạo tin nhắn đặt hàng ✨</button>
+          <p class="form-note">Sau khi tạo, bạn có thể sao chép tin nhắn và gửi qua Zalo, TikTok hoặc kênh của shop.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head"><div class="kicker">Say hello ♡</div><h2>Ghé thăm Mỡ Mỡ nhé!</h2><p class="muted">Cập nhật thông tin liên hệ thật của shop ở đây để khách dễ dàng tìm thấy bạn.</p></div>
+      <div class="contact-grid">
+        <article class="contact-card"><div class="emoji">💬</div><strong>Zalo</strong><p id="zaloText">Thêm số điện thoại hoặc liên kết Zalo của shop</p></article>
+        <article class="contact-card"><div class="emoji">🎵</div><strong>TikTok</strong><p id="tiktokText">Thêm tên tài khoản hoặc liên kết TikTok</p></article>
+        <article class="contact-card"><div class="emoji">💗</div><strong>Thông điệp từ tiệm</strong><p>Handmade nhỏ xinh — gửi gắm yêu thương từ Mỡ Mỡ.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>Được làm bằng ♡ dành riêng cho <strong>Tiệm nhỏ của Mỡ Mỡ</strong> · <span id="year"></span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const toast = (msg) => { const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(window.toastTimer); window.toastTimer=setTimeout(()=>el.classList.remove('show'),2600); };
+    document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+      document.querySelectorAll('.product').forEach(card=>card.hidden=btn.dataset.filter!=='all'&&card.dataset.category!==btn.dataset.filter);
+    }));
+    document.querySelectorAll('[data-product]').forEach(btn=>btn.addEventListener('click',()=>{
+      document.getElementById('product').value=btn.dataset.product;
+      document.getElementById('custom').scrollIntoView({behavior:'smooth'});
+      toast('Đã chọn: '+btn.dataset.product+' ♡');
+    }));
+    document.getElementById('orderForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      const name=document.getElementById('customer').value.trim();
+      const product=document.getElementById('product').value;
+      const quantity=document.getElementById('quantity').value;
+      const details=document.getElementById('details').value.trim();
+      const message=`Chào Mỡ Mỡ! Mình muốn đặt hàng tại Tiệm nhỏ của Mỡ Mỡ.\\nTên: ${name}\\nSản phẩm: ${product}\\nSố lượng: ${quantity}\\nYêu cầu thêm: ${details||'Chưa có'}`;
+      const blob=new Blob([message],{type:'text/plain;charset=utf-8'});
+      const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='tin-nhan-dat-hang-mo-mo.txt'; a.click(); URL.revokeObjectURL(url);
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(message).then(()=>toast('Đã tải tin nhắn và sao chép nội dung đặt hàng ♡')).catch(()=>toast('Đã tải tin nhắn đặt hàng ♡'))}
+      else toast('Đã tải tin nhắn đặt hàng ♡');
+    });
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
